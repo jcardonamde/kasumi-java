@@ -125,13 +125,19 @@ public class KasumiLoginForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String email = txtUsuario.getText().trim();
-        String password = txtPassword.getText().trim();
+        String password = new String(txtPassword.getPassword());
 
         UsuarioModel usuario = UsuarioDao.validarLogin(email, password);
 
         if (usuario != null) {
             JOptionPane.showMessageDialog(this, "Login correcto. Bienvenido/a " + usuario.getNombre());
-            // Aquí podrías abrir otro formulario
+            
+            // Apertura siguiente pantalla
+            forms.KasumiUsersDashboard dashboard = new forms.KasumiUsersDashboard();
+            dashboard.setVisible(true);
+            dashboard.setLocationRelativeTo(null);
+            
+            this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.");
         }

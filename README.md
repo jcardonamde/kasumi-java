@@ -44,7 +44,7 @@ git clone https://github.com/jcardonamde/kasumi-java.git
 
 * Inicio de sesión de usuarios con validación de credenciales.
 * Conexión a base de datos para gestión de usuarios con operaciones CRUD.
-* Interfaz gráfica desarrollada con Swing (si aplica).
+* Interfaz gráfica desarrollada con Swing.
 
 <br/>
 
